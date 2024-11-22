@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('calc.jpg'); /* Replace 'your_image_path.jpg' with the path to your image */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
+        }
+        
+        h2 {
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 10px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <div class="container">
+        <h2>Admin Login</h2>
+        <form action="login.php" method="post">
+            <input type="hidden" name="role" value="admin">
+            <div class="form-group">
+                <label for="admin-username">Username:</label>
+                <input type="text" id="admin-username" name="username">
+            </div>
+            <div class="form-group">
+                <label for="admin-password">Password:</label>
+                <input type="password" id="admin-password" name="password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+    <div class="container">
+        <h2>Staff Login</h2>
+        <form action="login.php" method="post">
+            <input type="hidden" name="role" value="staff">
+            <div class="form-group">
+                <label for="staff-username">Username:</label>
+                <input type="text" id="staff-username" name="username">
+            </div>
+            <div class="form-group">
+                <label for="staff-password">Password:</label>
+                <input type="password" id="staff-password" name="password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container">
+        <h2>Student Login</h2>
+        <form action="login.php" method="post">
+            <input type="hidden" name="role" value="student">
+            <div class="form-group">
+                <label for="student-username">Username:</label>
+                <input type="text" id="student-username" name="username">
+            </div>
+            <div class="form-group">
+                <label for="student-password">Password:</label>
+                <input type="password" id="student-password" name="password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
